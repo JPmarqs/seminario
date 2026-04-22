@@ -104,7 +104,7 @@ def generate_faker_medical(n: int = len(df_real)) -> pd.DataFrame:
     records = []
     for i in range(n):
         records.append({
-            "Patient_ID":      fake.unique.random_number(digits=3, fix_len=True),
+            "Patient_ID":      fake.unique.random_number(digits=9, fix_len=True),
             "Age":             fake.random_int(min=0, max=110),
             "Gender":          fake.random_element(elements=("Male", "Female")),
             "Condition":       fake.random_element(elements=conditions),
